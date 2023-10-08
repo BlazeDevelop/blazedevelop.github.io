@@ -1,0 +1,23 @@
+<!-- project_detail.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ project[1] }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="project-details">
+        <h1>Название проекта: {{ project[1] }}</h1>
+        <p>Описание проекта: {{ project[2] }}</p>
+        <p>Использованные языки: {{ project[3] }}</p>
+        <img src="{{ url_for('static', filename=project[4]) }}" alt="{{ project[1] }}">
+        <form action="/delete_project/{{ project[0] }}" method="post">
+            <input type="submit" value="Удалить проект" class="delete-button">
+        </form>
+        <a href="/projects" class="btn-back">Назад</a>
+    </div>
+</body>
+</html>

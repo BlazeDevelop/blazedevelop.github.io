@@ -1,0 +1,239 @@
+/* style.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    background-color: #f2f2f2; /* Более светлый серый фон */
+    background-image: url('/Users/admin/Downloads/ууу/static/css/background.jpg'); /* Замените 'background.jpg' на путь к вашему изображению */
+    background-size: cover; /* Масштабировать изображение на всю ширину и высоту экрана */
+    background-repeat: no-repeat; /* Запретить повторение фонового изображения */
+    background-attachment: fixed; /* Фон остается фиксированным при прокрутке */
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center; /* Центрирование текста */
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeInUp 0.5s ease-out forwards 0.1s;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1, h2, p {
+    color: #333;
+    font-weight: bold; /* Более жирный текст */
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #fff; /* Белый цвет текста */
+    font-weight: bold;
+    display: inline-block;
+    background-color: #0066cc; /* Цвет кнопки */
+    border: 2px solid #0066cc;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s; /* Анимация при наведении */
+}
+
+a:hover {
+    background-color: #004080; /* Цвет кнопки при наведении */
+    transform: scale(1.05); /* Увеличение размера при наведении */
+}
+
+.project-list {
+    list-style: none;
+    padding: 0;
+}
+
+.project-list li {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 20px;
+    background-color: #fff;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.project-list li:hover {
+    transform: translateY(-5px); /* Поднятие элемента при наведении */
+}
+
+.project-list li img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-container {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s; /* Анимация при фокусировке */
+}
+
+input[type="text"]:focus {
+    border-color: #0066cc; /* Изменение цвета рамки при фокусировке */
+}
+
+input[type="submit"] {
+    background-color: #0066cc;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #004080;
+}
+
+/* Новые стили для страницы с деталями проекта */
+
+.project-details {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Частично прозрачный белый фон */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    position: relative;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeInUp 0.5s ease-out forwards 0.1s;
+}
+
+.project-list li {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 20px;
+    background-color: #fff;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.project-details h1 {
+    font-size: 28px;
+}
+
+.project-details p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.project-details img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Новые стили для кнопки "Удалить проект" на странице с деталями проекта */
+
+.delete-button {
+    background-color: #cc0000; /* Красный цвет кнопки */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.delete-button:hover {
+    background-color: #990000; /* Красный цвет кнопки при наведении */
+}
+
+/* Новые стили для кнопки "Назад" на странице проекта и странице с деталями проекта */
+
+.btn-back {
+    background-color: #004080; /* Синий цвет кнопки */
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px; /* Добавляем отступ сверху */
+    text-decoration: none;
+    color: #fff;
+    border: none;
+    border-radius: 0;
+    transition: background-color 0.3s;
+}
+
+.btn-back:hover {
+    background-color: #003366; /* Синий цвет кнопки при наведении */
+}
+
+.btn-back {
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: transform 0.3s, background-color 0.3s, color 0.3s;
+}
+
+.add-project-button {
+    background-color: #0066cc;
+    border: 2px solid #0066cc;
+    margin-right: 10px;
+    transition: transform 0.3s, background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.add-project-button:hover {
+    background-color: #004080;
+    transform: scale(1.05);
+    border-color: #004080;
+}
+
+.btn-back {
+    background-color: #004080;
+    border: none;
+}
+
+.btn-back:hover {
+    background-color: #003366;
+    transform: scale(1.05);
+}

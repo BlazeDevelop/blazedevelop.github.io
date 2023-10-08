@@ -1,0 +1,21 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>{{ user_info.name }} {{ user_info.surname }}</h1>
+        <p>Страна: {{ user_info.country }}</p>
+        <p>Язык программирования: {{ user_info.programming_language }}</p>
+        <p>Стаж: {{ user_info.experience }}</p>
+        <p>Ссылка на GitHub: <a href="{{ user_info.links }}">{{ user_info.links }}</a></p>
+        <a href="/projects" class="btn">Мои проекты</a> <!-- Добавляем класс "btn" -->
+    </div>
+</body>
+</html>
